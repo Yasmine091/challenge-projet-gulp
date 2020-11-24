@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gulp Starter</title>
+    <link rel="stylesheet" href="dist/main.min.css">
+</head>
+
+<body class="index">
+    <header>
+        <nav class="menu">
+            <li>
+                <a href="#Accueil">Accueil</a>
+            </li>
+            <li>
+                <a href="#FlexBox">FlexBox</a>
+            </li>
+            <li>
+                <a href="#GridCSS">Grid CSS</a>
+            </li>
+            <li>
+                <a href="#Compare">Comparaison</a>
+            </li>
+        </nav>
+    </header>
+    <main>
+        <div id="Accueil" class="corps">
+            <h2>C'est quoi?</h2>
+            <hr><br>
+            <p>
+                Les FlexBox (Flexible Box) sont des propriétés CSS qui vont nous permettre de maquetter des elements, de façon assez simple et fluide.<br>
+
+            </p>
+        </div>
+        <div id="FlexBox" class="corps">
+            <h2>Utilisation des FlexBox</h2>
+            <hr>
+            <p>
+                On peut utiliser les FlexBox dans tous les navigateurs récents (Chrome, Edge, Mozilla, Safari, Opera..).<br>
+                Pour les mettre en place, il nous faudra créer un div qui fera de "container" pour nos blocs,
+                il faudra lui ajouter une classe dans la quelle on y mettra la propriéte <code>display: flex;</code>,
+                qui nous permettra de définir notre div comme une flex-box.
+            </p>
+                
+                <code class="demo">
+            .flex-container {
+                display: flex;
+            }
+                 </code>
+
+                <p>
+                Il suffit d'ajouter des elements dans notre "container", pour que la propriété <code>display: flex;</code> commencent a les arranger.<br>
+                Pour changer l'organisation des elements à l'intérieur du "container" il suffit d'ajouter la propriété
+                <code>flex-direction: row;</code> pour afficher nos éléments par rangée, ou <code>flex-direction: column;</code> pour les afficher par colonnes.
+            </p>
+            
+            <p>
+                Pour que les elements de notre container se mettent a la ligne quand il n'y a 
+                plus de place, on peut lui ajouter la propriété <code>flex-flow: wrap;</code>. minuto 3:45
+            </p>
+        </div>
+        <div id="GridCSS" class="corps">
+            <h2>Utilisation des Grid CSS</h2>
+            <hr>
+        </div>
+
+        <div id="Compare" class="corps">
+            <h2>comparaison entre les FlexBox et les Grid CSS</h2>
+            <hr>
+
+            <div class="container">
+                <div class="grid">
+                    <div class="box-ttl">Grid</div>
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                </div>
+                <hr>
+                <div class="flex">
+                    <div class="box-ttl">Flex</div>
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- <img src="dist/images/sample.jpg" alt="Description de l'image" class="image" /> -->
+    <footer>
+    </footer>
+    <script async src="dist/main.min.js">
+    </script>
+</body>
+
+</html>

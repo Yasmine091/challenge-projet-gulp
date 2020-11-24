@@ -1,0 +1,30 @@
+.menu {
+    width: 175px;
+    padding: 20px 0px;
+    position: fixed;
+    display: block;
+    top: 0;
+    margin-top: 20px;
+    border: solid 2px darkcyan;
+    border-left: 0px;
+    border-radius: 0px 10px 10px 0px;
+    text-transform: uppercase;
+    background-color: #fff;
+    text-align: left;
+    li {
+        list-style: none;
+        display: block;
+        color: rgba(0, 139, 139, 0.966);
+        margin: 15px 0px;
+        margin-left: 10px !important;
+        word-wrap: break-word;
+        font-weight: bold;
+    }
+    a {
+        color: inherit;
+        text-decoration: inherit;
+    }
+    a:hover::after {
+        content: " ☚";
+    }
+}
