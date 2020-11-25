@@ -32,43 +32,53 @@
             <h2>C'est quoi?</h2>
             <hr>
             <p>
-                Les FlexBox (Flexible Box) sont des propriétés CSS qui vont nous permettre de maquetter des elements, de façon assez simple et fluide.<br>
-
+                Les FlexBox (Flexible Box) et Grid CSS (grilles), ce sont des propriétés CSS qui vont nous faciliter l'organisations d'élements dans notre site.<br>
+                Ces propriétés CSS vont nous permettre de créer des grilles ou des sortes de tableaux dans les quels on aura des éléments ou blocs,
+                qu'on pourra transformer et afficher de façon très flexible, pour avoir le rendu que l'on veut.
+            </p>
+            <p>
+                Vu que mes explication théoriques sont un peu vagues, un peu plus en bas j'ai mis des explications techniques avec plus de détail.
             </p>
         </div>
         <div id="FlexBox" class="corps">
             <h2>Utilisation des FlexBox</h2>
             <hr>
             <p>
-                On peut utiliser les FlexBox dans tous les navigateurs récents (Chrome, Edge, Mozilla, Safari, Opera..).<br>
+                On peut utiliser les FlexBox dans tous les navigateurs récents (Chrome, Edge, Mozilla, Safari,
+                Opera..).<br>
                 Pour les mettre en place, il nous faudra créer un div qui fera de "container" pour nos blocs,
                 il faudra lui ajouter une classe dans la quelle on y mettra la propriéte <code>display: flex;</code>,
                 qui nous permettra de définir notre div comme une flex-box.
             </p>
-                
-                <code class="demo">
+
+            <code class="demo">
             .flex-container {
                 display: flex;
             }
                  </code>
 
-                <p>
-                Il suffit d'ajouter des elements dans notre "container", pour que la propriété <code>display: flex;</code> commencent a les arranger.<br>
-                Pour changer l'organisation des elements à l'intérieur du "container" il suffit d'ajouter la propriété
-                <code>flex-direction: row;</code> pour afficher nos éléments par rangée, ou <code>flex-direction: column;</code> pour les afficher par colonnes.
-            </p>
-            
             <p>
-                Pour que les elements de notre container se mettent a la ligne quand il n'y a 
+                Il suffit d'ajouter des elements dans notre "container", pour que la propriété
+                <code>display: flex;</code> commencent a les arranger.<br>
+                Pour changer l'organisation des elements à l'intérieur du "container" il suffit d'ajouter la propriété
+                <code>flex-direction: row;</code> pour afficher nos éléments par rangée, ou
+                <code>flex-direction: column;</code> pour les afficher par colonnes.
+            </p>
+
+            <p>
+                Pour que les elements de notre container se mettent a la ligne quand il n'y a
                 plus de place, on peut lui ajouter la propriété <code>flex-flow: wrap;</code>.<br>
             </p>
             <p>
-                Avec <code>justify-content: flex-start | center | flex-end;</code> on peut aligner les elements de notre flexbox au début de celui-ci, au centre ou a la fin.<br>
+                Avec <code>justify-content: flex-start | center | flex-end;</code> on peut aligner les elements de notre
+                flexbox au début de celui-ci, au centre ou a la fin.<br>
                 On peut aussi les aligner et les spacer avec la propriété
-                <code>justify-content: space-around | space-between;</code> qui va faire en sorte de centrer et spacer les elements dans le flex.
+                <code>justify-content: space-around | space-between;</code> qui va faire en sorte de centrer et spacer
+                les elements dans le flex.
                 <br>
-                Il existe la possibilité de aligner les elements de notre flexbox verticalement, avec la propriété <code>align-items: flex-start | center | stretch | flex-end;</code>.<br>
-                
+                Il existe la possibilité de aligner les elements de notre flexbox verticalement, avec la propriété
+                <code>align-items: flex-start | center | stretch | flex-end;</code>.<br>
+
             </p>
         </div>
         <div id="GridCSS" class="corps">
@@ -79,24 +89,42 @@
         <div id="Compare" class="corps">
             <h2>comparaison entre les FlexBox et les Grid CSS</h2>
             <hr>
-
+            <p>Ici on a un div avec une class grid, qui va afficher 3 colonnes en répetition, donc dans chaque rangée.
+            </p>
+            <code>
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);      
+    }
+            </code>
+            <br><br>
             <div class="container">
                 <div class="grid">
-                    <div class="box-ttl">Grid</div>
-                    <div>1</div>
-                    <div>2</div>
-                    <div>3</div>
+                    <div style="grid-column: 1 / 4;">1 ~ <code>grid-column: 1 / 4;</code></div>
+                    <div style="grid-row: 2 / 3;">2</div>
+                    <div style="grid-row: 2 / 4;">3 ~ <code>grid-row: 2 / 4;</code></div>
                     <div>4</div>
                     <div>5</div>
                 </div>
-                <hr>
+            </div>
+            <br><br>
+            <hr>
+            <p>Ici on a un div avec une class flex, qui va afficher 3 colonnes en répetition, donc dans chaque
+                rangée.</p>
+            <code>
+    .flex {
+        display: flex;          
+        flex-wrap: wrap;        
+    }
+                </code>
+            <br><br>
+            <div class="container">
                 <div class="flex">
-                    <div class="box-ttl">Flex</div>
                     <div>1</div>
                     <div>2</div>
                     <div>3</div>
                     <div>4</div>
-                    <div>5</div>
+                    <div>5 ~ Les blocs peuvent occuper tout l'espace disponible<br>(quand des colonens manquent) de façon automatique.</div>
                 </div>
             </div>
         </div>
