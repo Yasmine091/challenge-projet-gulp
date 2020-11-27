@@ -56,7 +56,7 @@
 
 .corps {
     width: auto;
-    max-width: 1080px;
+    max-width: 70%;
     height: auto;
     padding: 20px;
     background: $cyan;
@@ -84,7 +84,6 @@
         font-size: smaller;
         white-space: pre-wrap;
         display: inline-block;
-        
     }
     .demo { 
         margin: 5px 0px !important;

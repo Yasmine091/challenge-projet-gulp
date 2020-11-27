@@ -32,12 +32,15 @@
             <h2>C'est quoi?</h2>
             <hr>
             <p>
-                Les FlexBox (Flexible Box) et Grid CSS (grilles), ce sont des propriétés CSS qui vont nous faciliter l'organisations d'élements dans notre site.<br>
-                Ces propriétés CSS vont nous permettre de créer des grilles ou des sortes de tableaux dans les quels on aura des éléments ou blocs,
+                Les FlexBox (Flexible Box) et Grid CSS (grilles), ce sont des propriétés CSS qui vont nous faciliter
+                l'organisations d'élements dans notre site.<br>
+                Ces propriétés CSS vont nous permettre de créer des grilles ou des sortes de tableaux dans les quels on
+                aura des éléments ou blocs,
                 qu'on pourra transformer et afficher de façon très flexible, pour avoir le rendu que l'on veut.
             </p>
             <p>
-                Vu que mes explication théoriques sont un peu vagues, un peu plus en bas j'ai mis des explications techniques avec plus de détail.
+                Vu que mes explication théoriques sont un peu vagues, un peu plus en bas j'ai mis des explications
+                techniques avec plus de détail.
             </p>
         </div>
         <div id="FlexBox" class="corps">
@@ -52,7 +55,7 @@
             </p>
 
             <code class="demo">
-            .flex-container {
+            .flex-container {       
                 display: flex;
             }
                  </code>
@@ -84,8 +87,40 @@
         <div id="GridCSS" class="corps">
             <h2>Utilisation des Grid CSS</h2>
             <hr>
+            <p>
+                On peut utiliser les Grid CSS dans tous les navigateurs modernes (Chrome, Edge, Mozilla, Safari,
+                Opera..).<br>
+            </p>
+            <p>Pour les mettre en place, il nous faudra créer un div qui fera de "container" pour nos blocs,
+                il faudra lui ajouter une classe dans la quelle on y mettra la propriéte <code>display: grid;</code>,
+                qui nous permettra de définir notre div comme une grid.</p>
+            <code class="demo">
+            .grid-container {       
+                display: grid;
+            }
+            </code>
+            <p>
+                On à des propriétés qui nous permettent de positionner nos éléments dans les colonnes et rangées que l'on veut.<br>
+                Par exemple, on peut définir l'emplacement de notre item dans les colonnes, avec <code>grid-column: 2 / 4;</code>,
+                les numéros 2 et 4 représentent les lignes de notre tableau, lignes des colonnes et rangées.<br>
+                La même chose peut se faire pour changer le positionnement d'un element dans nos rangées, ça se fait
+                avec <code>grid-row: 1 / 3;</code>.<br>
+                Ces deux propriétés peuvent se mélanger pour définir avec précision l'emplacement de chacun de nos élements.
+            </p>
+            <p>
+                Grace a la propriété <code>gap</code>, on va pouvoir espacer les éléments de notre grid.<br>
+                Ça peut se faire de différentes façons, avec <code>grid-gap: 50px;</code> pour espacer les colonnes et
+                rangées de notre grid, ou avec <code>grid-row-gap: 50px;</code> pour espacer les rangées et
+                <code>grid-column-gap: 50px;</code> pour espacer nos colonnes.
+            </p>
+            <p>
+                On peut limiter la quantité de colonnes et rangées de notre grid grace a
+                <code>grid-column-start: 1;</code> et <code>grid-column-end: 4;</code> qui nous permet de définir la ligne
+                de départ et de fin de notre grid.<br>
+                Ça peut se faire aussi pour les rangées de notre grid avec <code>grid-row-start: 1;</code> et <code>grid-row-end: 6;</code>
+                pour limiter le nombre de rangées de notre grid.
+            </p>
         </div>
-
         <div id="Compare" class="corps">
             <h2>comparaison entre les FlexBox et les Grid CSS</h2>
             <hr>
@@ -113,7 +148,7 @@
                 rangée.</p>
             <code>
     .flex {
-        display: flex;          
+        display: flex;
         flex-wrap: wrap;        
     }
                 </code>
@@ -124,7 +159,8 @@
                     <div>2</div>
                     <div>3</div>
                     <div>4</div>
-                    <div>5 ~ Les blocs peuvent occuper tout l'espace disponible<br>(quand des colonens manquent) de façon automatique.</div>
+                    <div>5 ~ Les blocs peuvent occuper tout l'espace disponible<br>(quand des colonens manquent) de
+                        façon automatique.</div>
                 </div>
             </div>
         </div>
