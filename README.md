@@ -3,4 +3,4 @@
 
 
 # Maquette
- * https://yasmine091.gitlab.io/challenge-projet-gulp/m-challenge-projet-gulp.jpg
+ * https://yasmine091.gitlab.io/challenge-projet-gulp/dist/maquette.jpg
